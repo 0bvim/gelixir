@@ -2,10 +2,11 @@ import Config
 
 # Configure your database
 config :gelixir, Gelixir.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "backend_stuff",
+  password: "1234",
   hostname: "localhost",
   database: "gelixir_dev",
+  port: 5435,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
