@@ -26,9 +26,10 @@
     </button>
 
     <div
-      id ="dropdown_menu"
-      class="absolute right-0 mt-2 py-2 w-48 bg-emDark rounded-lg shadow-xl border border-white">
-      <%= if @current_user do  %>
+      id="dropdown_menu"
+      class="absolute right-0 mt-2 py-2 w-48 bg-emDark rounded-lg shadow-xl border border-white"
+    >
+      <%= if @current_user do %>
         Sign out
       <% else %>
         <.link
@@ -42,6 +43,9 @@
           Sign in
         </.link>
       <% end %>
-      </div>
+    </div>
   </div>
 </header>
+<main>
+  <% @inner_content %>
+</main>
