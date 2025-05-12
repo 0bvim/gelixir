@@ -42,10 +42,21 @@
         >
           Sign in
         </.link>
+        <.link
+          href={~p"/users/register"}
+          class=""
+          role="menuitem"
+          tabindex="-1"
+          method="get"
+          id="user-menu-item-0"
+        >
+          Register
+        </.link>
       <% end %>
     </div>
   </div>
 </header>
 <main>
-  <% @inner_content %>
+  <.flash_group flash={@flash} />
+  {@inner_content}
 </main>
