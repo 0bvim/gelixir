@@ -21,13 +21,19 @@
 
   <%!-- right side  --%>
   <div class="relative">
-    <button class="img-down-arrow" type="button" id="user-menu-button">
+    <button
+      class="img-down-arrow"
+      type="button"
+      id="user-menu-button"
+      phx-click={GelixirWeb.Layouts.App.toggle_dorpdown_menu()}
+    >
       <img src="/images/user-image.svg" alt="Profile Image" class="rounde-image-padding h-8 w-8" />
     </button>
 
     <div
       id="dropdown_menu"
-      class="absolute right-0 mt-2 py-2 w-48 bg-emDark rounded-lg shadow-xl border border-white"
+      class="dropdown-menu-arrow absolute right-0 mt-2 py-2 w-48 bg-emDark rounded-lg shadow-xl border border-white"
+      hidden="true"
     >
       <%= if @current_user do %>
         <.link
