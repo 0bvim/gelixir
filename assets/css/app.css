@@ -59,6 +59,10 @@ form input[type="text"]:focus {
     border-top: none;
 }
 
+.textarea:focus {
+    @apply focus:outline-none focus:border-white focus:ring-0;
+}
+
 .round-image-padding {
     border-radius: 50%;
     border: 1.5px solid #ffffff;
