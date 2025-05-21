@@ -9,7 +9,9 @@ defmodule Gelixir.Accounts.User do
     field :hashed_password, :string, redact: true
     field :current_password, :string, virtual: true, redact: true
     field :confirmed_at, :utc_datetime
-
+    has_many :gists, Gelixir.Gists.Gist
+    has_many :comments, Gelixir.Gists.Comment
+    has_many :saved_gists, Gelixir.Gists.SavedGist
     timestamps(type: :utc_datetime)
   end
 
